@@ -1,0 +1,99 @@
+
+/* sfs_test.c 
+ * 
+ * Written by Robert Vincent for Programming Assignment #1.
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#include "sfs_api.h"
+
+int main() {
+    // printf ("%lu \n", sizeof(root_directory)); 
+    // printf ("%lu \n", sizeof(unsigned int));
+    // printf ("%lu", sizeof(char)*21);  
+    mksfs(1);
+    //split string test 
+
+    // const char* string1;
+    // string1 = "this is a nice Assignment"; 
+    
+    // char dest[3] ;  
+    // int i; 
+    // int want_size = sizeof(char)*3; 
+    // printf("size of string1 is %d\n", sizeof(string1));
+    // for (i=0; i < strlen(string1)*sizeof(char); i+=want_size){
+        
+    //     strncpy(dest,string1 + 3*(i/want_size), sizeof(char)*3);  
+
+    //     printf("%s i equals to %d\n", dest, i);
+
+    // }
+    
+     
+    int f = sfs_fopen("A.txt");
+    printf("f file id is %d!\n",f);
+    int t = sfs_fopen("B.txt"); 
+    printf("t file id is %d!\n",t);
+    int x = sfs_fopen("C.txt"); 
+    int z = sfs_fopen("A.txt"); 
+    int y = sfs_fopen("DHSIAOPGHFIODASHGJFIDK"); 
+    
+
+
+    char *my_data = "hahahahahahahhahahahahahahahhahahahahahahahhahhahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahhahahahahahahahhahahahahahahahhaahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahhahahahahahahahha"; //"The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dogThe quick brown fox jumps over the lazy dog The quick brown fox jmps over the lazy dog";
+    int size_of_my_data = sizeof(char)*strlen(my_data); 
+    printf("size of my_data is %d\n", size_of_my_data);
+    char out_data[100000];
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);     
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);     
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+        sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);     
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);     
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    sfs_fwrite(t, my_data, size_of_my_data);
+    printf("fwrite done\n");               
+    sfs_fread(t, out_data, sizeof(out_data));
+    printf("fread done\n"); 
+    printf("out_data size is %d\n", strlen(out_data));
+    sfs_fclose(t);
+    printf("close done\n");
+}
